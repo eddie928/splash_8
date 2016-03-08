@@ -1,0 +1,167 @@
+
+
+
+
+
+
+
+
+haproxy:
+    image: haproxy:1.6
+    ports:
+        # stats
+        - "8036:8036"
+
+        # splash
+        - "8050:8050"
+    links:
+        - splash0
+        - splash1
+        - splash2
+        - splash3
+        - splash4
+        - splash5
+        - splash6
+        - splash7
+        - splash8
+        - splash9
+        - splash10
+        - splash11
+    volumes:
+        - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    restart: always
+
+splash0:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash1:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash2:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash3:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash4:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash5:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash6:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash7:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash8:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash9:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash10:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+splash11:
+    image: scrapinghub/splash:2.0.2
+    command: --max-timeout 20 --slots 10 --maxrss 600 --verbosity 1 --filters-path=/etc/splash/filters
+    volumes:
+        - /root/aquarium/filters:/etc/splash/filters
+    expose:
+        - 8050
+    mem_limit: 840m
+    memswap_limit: 1080m
+    restart: always
+
+
+
